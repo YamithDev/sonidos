@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="danger">
     <ion-title>
       Sonidos App
     </ion-title>
@@ -8,11 +8,14 @@
 
 <ion-content>
   <ion-list>
-  	<ion-item>
-  		<ion-avatar>
-  			<img src="assets/animales/caballo.png">
+  	<ion-item *ngFor="let animal of animales"
+              (click)="reproducir(animal)">
+  		<ion-avatar item-left>
+  			<img [src]="animal.imagen">
   		</ion-avatar>
-  		<h2>Caballo</h2>
+  		<h2>{{animal.nombre}}</h2>
+      <ion-icon *ngIf="!animal.reproduciendo" name="play" item-right></ion-icon>
+      <ion-icon *ngIf="animal.reproduciendo" name="pause" item-right></ion-icon>
   	</ion-item>
   </ion-list>
 </ion-content>

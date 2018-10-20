@@ -1,4 +1,3 @@
-
 export const ANIMALES = [
       {
         nombre: "Caballo",
@@ -32,7 +31,7 @@ export const ANIMALES = [
         nombre: "Mono",
         imagen: "assets/animales/mono.png",
         audio: "assets/sonidos/mono.mp3",
-        duracion: 8,
+        duracion: 4,
         reproduciendo: false
       },
       {
